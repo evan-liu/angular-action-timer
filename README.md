@@ -12,8 +12,12 @@ Useful when some function need to be invoked after user "stop" doing something c
 
 [![Bower](https://img.shields.io/bower/v/angular-action-timer.svg)]()
 
-```
+```sh
 bower install angular-action-timer
+```
+
+```javascript
+angular.module('app', ['ng.actionTimer']);
 ```
      
 ## API
