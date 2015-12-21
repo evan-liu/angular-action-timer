@@ -19,6 +19,28 @@ bower install angular-action-timer
 ```javascript
 angular.module('app', ['ng.actionTimer']);
 ```
+
+## Example
+
+```javascript
+angular.module('demo', ['ng.event', 'ng.actionTimer'])
+  .factory('demoTrigger', demoTrigger);
+  
+function demoTrigger(evtDemoTriggered, actionTimer) {
+  var timer = actionTimer(trigger, 500);
+  return {
+    execute: execute
+  };
+
+  function execute() {
+    timer.schedule();
+  }
+
+  function trigger() {
+    evtDemoTriggered.emit();
+  }
+}  
+```
      
 ## API
 
